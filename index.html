@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tquide - Timely Quick Delivery in Ghatsila</title>
+    <meta name="description" content="Order groceries, medicines, fruits, dairy and daily essentials from local kirana stores via WhatsApp in Ghatsila.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                green: '#0f3822',       // Logo Dark Green
+                greenHover: '#164d30',  // Dark Green Hover
+                yellow: '#f3b21b',      // Logo Gold/Yellow
+                yellowHover: '#d99c10', // Yellow Hover
+                lightBg: '#f4f7f5',     // Soft Light Background
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-brand-lightBg text-slate-800 font-sans antialiased selection:bg-brand-yellow selection:text-brand-green">
+
+<!-- ================= HEADER ================= -->
+<header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
+
+    <!-- Brand Logo -->
+    <a href="#" class="flex items-center gap-2">
+      <img src="assets/logo.png" 
+           alt="Tquide - Timely Quick Delivery" 
+           class="h-10 sm:h-12 md:h-14 w-auto object-contain">
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700">
+      <a href="#home" class="hover:text-brand-green transition-colors">Home</a>
+      <a href="#services" class="hover:text-brand-green transition-colors">Services</a>
+      <a href="#partner" class="hover:text-brand-green transition-colors">Partner Store</a>
+      <a href="#rider" class="hover:text-brand-green transition-colors">Rider</a>
+      <a href="#faq" class="hover:text-brand-green transition-colors">FAQ</a>
+      <a href="#contact" class="hover:text-brand-green transition-colors">Contact</a>
+    </nav>
+
+    <!-- Header CTA with WhatsApp Icon -->
+    <a href="https://wa.me/916205317967?text=Hi%20Tquide!%20Mujhe%20saman%20order%20karna%20hai.%0A%0A🛍️%20Order%20Details:%0A-%20%0A%0A📍%20Delivery%20Address:%0A-%20" 
+       target="_blank" rel="noopener noreferrer"
+       class="hidden md:inline-flex items-center gap-2.5 bg-brand-green text-white px-6 py-2.5 rounded-full font-bold hover:bg-brand-greenHover hover:shadow-lg hover:-translate-y-0.5 duration-200">
+      <svg class="w-5 h-5 fill-current text-brand-yellow" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg> Order on WhatsApp
+    </a>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button id="menu-btn" class="md:hidden text-brand-green p-2 focus:outline-none" aria-label="Toggle Navigation">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-xl">
+    <a href="#home" class="block font-bold text-slate-800 hover:text-brand-green">Home</a>
+    <a href="#services" class="block font-bold text-slate-800 hover:text-brand-green">Services</a>
+    <a href="#partner" class="block font-bold text-slate-800 hover:text-brand-green">Partner Store</a>
+    <a href="#rider" class="block font-bold text-slate-800 hover:text-brand-green">Rider</a>
+    <a href="#faq" class="block font-bold text-slate-800 hover:text-brand-green">FAQ</a>
+    <a href="#contact" class="block font-bold text-slate-800 hover:text-brand-green">Contact</a>
+    <a href="https://wa.me/916205317967?text=Hi%20Tquide!%20Mujhe%20saman%20order%20karna%20hai." 
+       target="_blank" rel="noopener noreferrer"
+       class="flex items-center justify-center gap-2.5 w-full bg-brand-green text-white py-3 rounded-full font-bold shadow-md">
+      <svg class="w-5 h-5 fill-current text-brand-yellow" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg> Order on WhatsApp
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO SECTION (FULL-SIZE BANNER) ================= -->
+<section id="home" class="relative min-h-[90vh] md:min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+  
+  <!-- Full Size Background Banner Image -->
+  <div class="absolute inset-0 z-0">
+    <img src="assets/hero.png" 
+         alt="Tquide Delivery Background Banner" 
+         class="w-full h-full object-cover object-center md:object-right">
+    <!-- Gradient Overlay: टेक्स्ट को साफ और मोबाइल में स्पष्ट दिखाने के लिए -->
+    <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40 md:to-transparent"></div>
+  </div>
+
+  <!-- Hero Content Over Banner -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
+    <div class="grid lg:grid-cols-2 gap-8 items-center">
+
+      <!-- Text Content -->
+      <div class="max-w-xl">
+        <div class="inline-flex items-center gap-2 bg-amber-100/90 border border-amber-300 text-slate-900 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full font-extrabold text-xs sm:text-sm mb-4 sm:mb-6 shadow-sm">
+          <span>⚡</span> Ghatsila's Fast Local Delivery Service
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.15] text-slate-900 tracking-tight">
+          Everything You Need, <span class="text-brand-green">Delivered</span> Within Minutes.
+        </h1>
+
+        <p class="mt-4 sm:mt-6 text-base sm:text-xl text-slate-700 leading-relaxed font-semibold">
+          Order groceries, medicines, fresh fruits, and daily essentials from nearby trusted Kirana stores through WhatsApp.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8">
+          <a href="https://wa.me/916205317967?text=Hi%20Tquide!%20Mujhe%20saman%20order%20karna%20hai.%0A%0A🛍️%20Order%20Details:%0A-%20%0A%0A📍%20Delivery%20Address:%0A-%20" 
+             target="_blank" rel="noopener noreferrer"
+             class="bg-brand-green text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-extrabold hover:bg-brand-greenHover hover:shadow-xl hover:-translate-y-1 duration-200 flex items-center gap-3">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current text-brand-yellow" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg> Order Now
+          </a>
+          <a href="#partner"
+             class="border-2 border-brand-green text-brand-green bg-white/80 backdrop-blur px-6 py-3.5 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-extrabold hover:bg-brand-green hover:text-white duration-200">
+            Partner Store
+          </a>
+        </div>
+
+        <!-- Metric Badges -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-6 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-300/80">
+          <div>
+            <h2 class="text-2xl sm:text-4xl font-black text-brand-green">30 Min</h2>
+            <p class="text-slate-700 text-xs sm:text-sm mt-1 font-bold">Fast Delivery</p>
+          </div>
+          <div>
+            <h2 class="text-2xl sm:text-4xl font-black text-brand-green">100+</h2>
+            <p class="text-slate-700 text-xs sm:text-sm mt-1 font-bold">Products</p>
+          </div>
+          <div>
+            <h2 class="text-2xl sm:text-4xl font-black text-brand-green">Local</h2>
+            <p class="text-slate-700 text-xs sm:text-sm mt-1 font-bold">Trusted Stores</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Badges Side Adjustment for Large Screens -->
+      <div class="relative h-64 md:h-96 hidden lg:block">
+        <div class="absolute top-8 right-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-4 border border-slate-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-yellow/20 flex items-center justify-center text-xl">⚡</div>
+          <div>
+            <p class="font-extrabold text-slate-900 text-sm">Timely & Quick</p>
+            <p class="text-xs text-slate-500 font-medium">10-30 Minutes</p>
+          </div>
+        </div>
+
+        <div class="absolute bottom-12 right-20 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-4 border border-slate-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-green/10 flex items-center justify-center text-xl">🏪</div>
+          <div>
+            <p class="font-extrabold text-slate-900 text-sm">Nearby Kirana</p>
+            <p class="text-xs text-slate-500 font-medium">Verified Partners</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES SECTION ================= -->
+<section id="services" class="py-16 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">What Can You Order?</h2>
+      <p class="mt-3 sm:mt-4 text-base sm:text-lg text-slate-500 font-medium">Everything picked directly from your local market stores.</p>
+    </div>
+
+    <!-- UI Grid for Categories (Electronics Removed) -->
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mt-12 sm:mt-16">
+      
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/grocery.png" alt="Grocery" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+        </div>
+        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Groceries</h3>
+        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">Atta, Rice, Oil & Spices.</p>
+      </div>
+
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/fruits.png" alt="Fruits & Veggies" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+        </div>
+        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Fruits & Veggies</h3>
+        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">Fresh daily harvest.</p>
+      </div>
+
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/medicine.png" alt="Medicines" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+        </div>
+        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Medicines</h3>
+        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">Pharmacy essentials.</p>
+      </div>
+
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/bakery.png" alt="Bakery" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+        </div>
+        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Bakery</h3>
+        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">Fresh bread & cakes.</p>
+      </div>
+
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/dairy.png" alt="Dairy" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+        </div>
+        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Milk & Dairy</h3>
+        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">Milk, Curd & Paneer.</p>
+      </div>
+
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/stationery.png" alt="Stationery" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+        </div>
+        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Stationery</h3>
+        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">School & Office needs.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNER SECTION ================= -->
+<section id="partner" class="py-16 md:py-28 bg-brand-green text-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      
+      <div>
+        <img src="assets/partner-shop.png" 
+             alt="Tquide Kirana Partner Store" 
+             class="w-full h-auto object-cover rounded-3xl shadow-2xl border-2 border-brand-yellow/30">
+      </div>
+
+      <div>
+        <span class="text-brand-yellow font-extrabold uppercase tracking-wider text-xs sm:text-sm">For Kirana Store Owners</span>
+        <h2 class="text-3xl md:text-5xl font-black mt-2 leading-tight">Grow Your Shop With Tquide</h2>
+        <p class="mt-4 sm:mt-6 text-slate-200 text-base sm:text-lg leading-relaxed font-normal">
+          Connect your Kirana store with local customers. We handle the WhatsApp orders and delivery pickup!
+        </p>
+
+        <ul class="mt-6 sm:mt-8 space-y-3 sm:space-y-4 text-slate-100 font-bold text-sm sm:text-base">
+          <li class="flex items-center gap-3"><span class="text-brand-yellow text-xl">✔</span> Free Kirana Store Registration</li>
+          <li class="flex items-center gap-3"><span class="text-brand-yellow text-xl">✔</span> Get More Orders Daily</li>
+          <li class="flex items-center gap-3"><span class="text-brand-yellow text-xl">✔</span> Fast Delivery Pickup by Tquide Rider</li>
+        </ul>
+
+        <a href="https://wa.me/916205317967?text=Hi%20Tquide!%20Main%20apne%20Kirana%20Store%20ko%20Tquide%20ke%20sath%20partner%20banana%20chahta%20hu.%0A%0A🏪%20Dukaan%20Ka%20Naam:%20%0A📍%20Area%20%2F%20Location:%20" 
+           target="_blank" rel="noopener noreferrer"
+           class="inline-block mt-6 sm:mt-8 bg-brand-yellow text-slate-950 px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-black hover:bg-brand-yellowHover hover:scale-105 duration-200 shadow-xl text-sm sm:text-base">
+          Register Your Store Now
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= RIDER SECTION ================= -->
+<section id="rider" class="py-16 md:py-28 bg-brand-lightBg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      
+      <div class="order-2 lg:order-1">
+        <span class="text-brand-green font-extrabold uppercase tracking-wider text-xs sm:text-sm">Join Our Fleet</span>
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mt-2">Become a Tquide Rider</h2>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+          Earn money by picking up orders from nearby stores and delivering to customers in your area.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
+          <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 class="text-2xl sm:text-3xl font-black text-brand-green">₹500+</h3>
+            <p class="text-slate-500 text-xs sm:text-sm mt-1 font-bold">Daily Earnings</p>
+          </div>
+          <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 class="text-2xl sm:text-3xl font-black text-brand-green">Flexible</h3>
+            <p class="text-slate-500 text-xs sm:text-sm mt-1 font-bold">Working Hours</p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/916205317967?text=Hi%20Tquide!%20Main%20as%20a%20Rider%20join%20karna%20chahta%20hu." 
+           target="_blank" rel="noopener noreferrer"
+           class="inline-block mt-6 sm:mt-8 bg-brand-green text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-extrabold hover:bg-brand-greenHover duration-200 shadow-md text-sm sm:text-base">
+          Apply as Rider
+        </a>
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <img src="assets/rider.png" 
+             alt="Tquide Delivery Rider" 
+             class="w-full h-auto object-cover rounded-3xl shadow-xl">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= COUNTDOWN SECTION ================= -->
+<section class="py-16 md:py-24 bg-gradient-to-r from-brand-green via-slate-900 to-brand-green text-white text-center">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <h2 class="text-3xl md:text-5xl font-black tracking-tight">Launching Soon 🚀</h2>
+    <p class="mt-3 sm:mt-4 text-base sm:text-lg text-slate-200">Tquide is coming soon to serve Ghatsila with Timely & Quick Delivery!</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mt-8 sm:mt-12">
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-brand-yellow/30">
+        <h3 id="days" class="text-3xl sm:text-5xl font-black text-brand-yellow">00</h3>
+        <p class="text-[10px] sm:text-xs uppercase tracking-widest text-slate-300 mt-1 sm:mt-2 font-bold">Days</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-brand-yellow/30">
+        <h3 id="hours" class="text-3xl sm:text-5xl font-black text-brand-yellow">00</h3>
+        <p class="text-[10px] sm:text-xs uppercase tracking-widest text-slate-300 mt-1 sm:mt-2 font-bold">Hours</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-brand-yellow/30">
+        <h3 id="minutes" class="text-3xl sm:text-5xl font-black text-brand-yellow">00</h3>
+        <p class="text-[10px] sm:text-xs uppercase tracking-widest text-slate-300 mt-1 sm:mt-2 font-bold">Minutes</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-brand-yellow/30">
+        <h3 id="seconds" class="text-3xl sm:text-5xl font-black text-brand-yellow">00</h3>
+        <p class="text-[10px] sm:text-xs uppercase tracking-widest text-slate-300 mt-1 sm:mt-2 font-bold">Seconds</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COVERAGE SECTION ================= -->
+<section class="py-16 md:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid md:grid-cols-2 gap-10 lg:gap-12 items-center">
+      <div>
+        <img src="assets/map.png" 
+             alt="Tquide Coverage Area" 
+             class="w-full h-auto object-cover rounded-3xl border border-slate-100 shadow-md">
+      </div>
+      <div>
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900">Service Coverage Area</h2>
+        <p class="mt-3 sm:mt-4 text-slate-600 font-medium">Delivering across key locations around Ghatsila:</p>
+
+        <div class="grid grid-cols-2 gap-3 sm:gap-4 mt-6 sm:mt-8">
+          <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 bg-brand-lightBg rounded-xl font-bold text-sm sm:text-base"><span class="text-brand-green">📍</span> Ghatsila</div>
+          <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 bg-brand-lightBg rounded-xl font-bold text-sm sm:text-base"><span class="text-brand-green">📍</span> Kashida</div>
+          <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 bg-brand-lightBg rounded-xl font-bold text-sm sm:text-base"><span class="text-brand-green">📍</span> Moubhandar</div>
+          <div class="flex items-center gap-2.5 sm:gap-3 p-3 sm:p-3.5 bg-brand-lightBg rounded-xl font-bold text-sm sm:text-base"><span class="text-brand-green">📍</span> Rajstate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ SECTION ================= -->
+<section id="faq" class="py-16 md:py-20 bg-brand-lightBg">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <h2 class="text-3xl md:text-4xl font-black text-center text-slate-900">Frequently Asked Questions</h2>
+
+    <div class="mt-8 sm:mt-12 space-y-4">
+      <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-slate-200">
+        <h3 class="font-extrabold text-base sm:text-lg text-slate-900">How do I place an order on Tquide?</h3>
+        <p class="mt-2 text-slate-600 text-sm sm:text-base">Click on 'Order on WhatsApp', send us your order list and address. We pick up items from the nearby Kirana store and deliver to you.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-slate-200">
+        <h3 class="font-extrabold text-base sm:text-lg text-slate-900">Do I need an app?</h3>
+        <p class="mt-2 text-slate-600 text-sm sm:text-base">No app download is required! WhatsApp is all you need to place your order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-16 md:py-20 bg-white text-center">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <h2 class="text-3xl md:text-4xl font-black text-slate-900">Have Questions? Let's Talk</h2>
+    <p class="mt-3 sm:mt-4 text-slate-500 font-medium text-sm sm:text-base">Reach out to us for orders, store partnerships, or rider joining.</p>
+    <a href="https://wa.me/916205317967" target="_blank" rel="noopener noreferrer"
+       class="inline-flex items-center gap-2.5 mt-6 sm:mt-8 bg-brand-green text-white px-8 py-3.5 sm:px-10 sm:py-4 rounded-full font-extrabold shadow-lg hover:bg-brand-greenHover duration-200 text-sm sm:text-base">
+      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current text-brand-yellow" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg> Chat on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-slate-950 text-white py-12 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
+    <div>
+      <img src="assets/logo-light.png" 
+           alt="Tquide Logo" 
+           class="h-10 mx-auto md:mx-0 mb-2">
+      <p class="text-slate-500 text-sm mt-1">© 2026 Tquide. All rights reserved.</p>
+    </div>
+    <div class="flex gap-6 text-slate-400 text-sm font-semibold">
+      <a href="#home" class="hover:text-white">Home</a>
+      <a href="#partner" class="hover:text-white">Partner Store</a>
+      <a href="#rider" class="hover:text-white">Rider</a>
+      <a href="#faq" class="hover:text-white">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Action -->
+<a href="https://wa.me/916205317967?text=Hi%20Tquide!%20Mujhe%20saman%20order%20karna%20hai." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Order"
+   class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50">
+  <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<!-- JavaScript -->
+<script>
+  // Mobile Nav Toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+  // Countdown Logic
+  const launchDate = new Date("August 7, 2026 09:00:00").getTime();
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+
+    if (distance < 0) {
+      clearInterval(timer);
+      return;
+    }
+
+    document.getElementById("days").innerText = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+    document.getElementById("hours").innerText = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+    document.getElementById("minutes").innerText = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+    document.getElementById("seconds").innerText = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+  }, 1000);
+</script>
+
+</body>
+</html>
