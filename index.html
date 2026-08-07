@@ -93,7 +93,7 @@
     <img src="assets/hero.png" 
          alt="Tquide Delivery Background Banner" 
          class="w-full h-full object-cover object-center md:object-right">
-    <!-- Gradient Overlay: टेक्स्ट को साफ और मोबाइल में स्पष्ट दिखाने के लिए -->
+    <!-- Gradient Overlay -->
     <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40 md:to-transparent"></div>
   </div>
 
@@ -168,68 +168,111 @@
   </div>
 </section>
 
-<!-- ================= SERVICES SECTION ================= -->
+<!-- ================= SERVICES SECTION (REAL CATEGORY IMAGES) ================= -->
 <section id="services" class="py-16 md:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="text-center max-w-2xl mx-auto">
       <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">What Can You Order?</h2>
-      <p class="mt-3 sm:mt-4 text-base sm:text-lg text-slate-500 font-medium">Everything picked directly from your local market stores.</p>
+      <p class="mt-3 sm:mt-4 text-base sm:text-lg text-slate-500 font-medium">Everything picked directly from your local market stores in Ghatsila.</p>
     </div>
 
-    
-    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mt-12 sm:mt-16">
+    <!-- Categories Grid (11 Image Categories) -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-12 sm:mt-16">
       
-      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
-        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
-          <img src="assets/icons/grocery.png" alt="Grocery" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+      <!-- 1. Groceries -->
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-5 sm:p-6 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-2xl bg-white/80 p-2 shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/grocery.png" alt="Groceries" class="w-full h-full object-contain">
         </div>
-        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Groceries</h3>
-        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">Atta, Rice, Oil & Spices.</p>
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Groceries</h3>
+        <p class="text-slate-500 mt-1 text-xs">Atta, Rice, Oil & Spices.</p>
       </div>
 
-      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
-        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
-          <img src="assets/icons/fruits.png" alt="Fruits & Veggies" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+      <!-- 2. Fruits & Veggies -->
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-5 sm:p-6 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-2xl bg-white/80 p-2 shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/fruits.png" alt="Fruits & Veggies" class="w-full h-full object-contain">
         </div>
-        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Fruits & Veggies</h3>
-        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">Fresh daily harvest.</p>
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Fruits & Veggies</h3>
+        <p class="text-slate-500 mt-1 text-xs">Fresh daily harvest.</p>
       </div>
 
-      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
-        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
-          <img src="assets/icons/medicine.png" alt="Medicines" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+      <!-- 3. Non-Veg Items -->
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-5 sm:p-6 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-2xl bg-white/80 p-2 shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/nonveg.png" alt="Non-Veg Items" class="w-full h-full object-contain">
         </div>
-        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Medicines</h3>
-        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">Pharmacy essentials.</p>
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Non-Veg Items</h3>
+        <p class="text-slate-500 mt-1 text-xs">Chicken, Mutton & Fish.</p>
       </div>
 
-      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
-        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
-          <img src="assets/icons/bakery.png" alt="Bakery" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+      <!-- 4. Milk & Dairy -->
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-5 sm:p-6 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-2xl bg-white/80 p-2 shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/dairy.png" alt="Milk & Dairy" class="w-full h-full object-contain">
         </div>
-        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Bakery</h3>
-        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">Fresh bread & cakes.</p>
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Milk & Dairy</h3>
+        <p class="text-slate-500 mt-1 text-xs">Milk, Curd & Paneer.</p>
       </div>
 
-      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
-        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
-          <img src="assets/icons/dairy.png" alt="Dairy" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+      <!-- 5. Bakery -->
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-5 sm:p-6 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-2xl bg-white/80 p-2 shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/bakery.png" alt="Bakery" class="w-full h-full object-contain">
         </div>
-        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Milk & Dairy</h3>
-        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">Milk, Curd & Paneer.</p>
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Bakery</h3>
+        <p class="text-slate-500 mt-1 text-xs">Fresh Bread, Buns & Cakes.</p>
       </div>
 
-      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-6 sm:p-8 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
-        <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 flex items-center justify-center rounded-2xl bg-white shadow-sm group-hover:scale-110 transition-transform">
-          <img src="assets/icons/stationery.png" alt="Stationery" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
+      <!-- 6. Snacks & Sweets -->
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-5 sm:p-6 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-2xl bg-white/80 p-2 shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/snacks.png" alt="Snacks & Sweets" class="w-full h-full object-contain">
         </div>
-        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Stationery</h3>
-        <p class="text-slate-500 mt-1.5 sm:mt-2 text-xs sm:text-sm">School & Office needs.</p>
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Snacks & Sweets</h3>
+        <p class="text-slate-500 mt-1 text-xs">Chips, Biscuits & Chocolates.</p>
+      </div>
+
+      <!-- 7. Cold Drinks & Beverages -->
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-5 sm:p-6 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-2xl bg-white/80 p-2 shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/beverages.png" alt="Cold Drinks & Juices" class="w-full h-full object-contain">
+        </div>
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Cold Drinks & Juices</h3>
+        <p class="text-slate-500 mt-1 text-xs">Soft Drinks, Juices & Water.</p>
+      </div>
+
+      <!-- 8. Medicines -->
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-5 sm:p-6 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-2xl bg-white/80 p-2 shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/medicine.png" alt="Medicines" class="w-full h-full object-contain">
+        </div>
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Medicines</h3>
+        <p class="text-slate-500 mt-1 text-xs">Pharmacy & Wellness needs.</p>
+      </div>
+
+      <!-- 9. Personal Care -->
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-5 sm:p-6 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-2xl bg-white/80 p-2 shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/personalcare.png" alt="Personal Care" class="w-full h-full object-contain">
+        </div>
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Personal Care</h3>
+        <p class="text-slate-500 mt-1 text-xs">Soaps, Shampoos & Grooming.</p>
+      </div>
+
+      <!-- 10. Baby Care -->
+      <div class="group bg-brand-lightBg border border-slate-100 rounded-3xl p-5 sm:p-6 text-center hover:bg-white hover:shadow-xl hover:border-brand-green/30 hover:-translate-y-1.5 transition-all duration-300">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 flex items-center justify-center rounded-2xl bg-white/80 p-2 shadow-sm group-hover:scale-110 transition-transform">
+          <img src="assets/icons/babycare.png" alt="Baby Care" class="w-full h-full object-contain">
+        </div>
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Baby Care</h3>
+        <p class="text-slate-500 mt-1 text-xs">Diapers, Baby Food & Lotion.</p>
       </div>
 
     </div>
   </div>
 </section>
+
 <!-- About Tquide Section -->
 <section id="about" class="py-12 bg-white border-t border-slate-100">
   <div class="max-w-4xl mx-auto px-4 text-center">
@@ -261,6 +304,7 @@
 
   </div>
 </section>
+
 <!-- ================= PARTNER SECTION ================= -->
 <section id="partner" class="py-16 md:py-28 bg-brand-green text-white relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
